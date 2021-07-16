@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, Host, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +8,8 @@ import { Component, HostListener, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   isClick: boolean = false;
   isButtonShow: boolean = true;
+  isScroll: boolean = false;
+
   constructor() {
     this.showButton();
   }
@@ -33,5 +35,14 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.showButton();
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onscroll() {
+    if (window.scrollY > 100) {
+      this.isScroll = true;
+    } else {
+      this.isScroll = false;
+    }
   }
 }

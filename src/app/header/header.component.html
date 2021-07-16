@@ -1,4 +1,4 @@
-<div class="navbar">
+<div [ngClass]="isScroll ? 'navbar navbar-scroll' : 'navbar'">
   <div class="navbar-container">
     <a routerLink="/" class="navbar-logo" (click)="closeMobileBtn()">
       PHCY <i class="fas fa-camera-retro"></i>
