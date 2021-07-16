@@ -1,0 +1,32 @@
+<div class="navbar">
+  <div class="navbar-container">
+    <a routerLink="/" class="navbar-logo" (click)="closeMobileBtn()">
+      PHCY <i class="fas fa-camera-retro"></i>
+    </a>
+    <div class="menu-icon" (click)="handleClick()">
+      <i [ngClass]="isClick ? 'fas fa-times' : 'fas fa-bars'"></i>
+    </div>
+    <ul [ngClass]="isClick ? 'nav-menu active' : 'nav-menu'">
+      <li class="nav-item">
+        <a routerLink="/" class="nav-links" (click)="closeMobileBtn()">
+          Home
+        </a>
+      </li>
+      <li class="nav-item" (click)="closeMobileBtn()">
+        <a routerLink="/services" class="nav-links"> Services </a>
+      </li>
+      <li class="nav-item" (click)="closeMobileBtn()">
+        <a routerLink="/" class="nav-links"> Products </a>
+      </li>
+      <li class="nav-item" (click)="closeMobileBtn()">
+        <a routerLink="/" class="nav-links"> Offers </a>
+      </li>
+      <li class="nav-item" (click)="closeMobileBtn()">
+        <a routerLink="/" class="nav-links-mobile"> Sign Up </a>
+      </li>
+    </ul>
+    <div *ngIf="isButtonShow">
+      <app-button buttonStyle="btn--outline" children="SIGNUP"></app-button>
+    </div>
+  </div>
+</div>
