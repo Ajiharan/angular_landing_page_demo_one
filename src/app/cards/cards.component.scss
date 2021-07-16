@@ -1,0 +1,30 @@
+.cards {
+  background-color: white;
+  padding: 4rem;
+
+  h1 {
+    text-align: center;
+  }
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1120px;
+    width: 95%;
+    margin: 0 auto;
+  }
+  &-items {
+    display: flex;
+    margin-bottom: 24px;
+
+    @media screen and (max-width: 970px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &-wrapper {
+    position: relative;
+    margin: 50px 0 45px;
+  }
+}
