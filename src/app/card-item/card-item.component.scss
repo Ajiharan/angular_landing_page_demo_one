@@ -26,7 +26,7 @@
   padding-top: 75%;
   overflow: hidden;
   &::after {
-    content: attr(data-category);
+    content: attr(title);
     position: absolute;
     bottom: 0;
     margin-left: 10px;
@@ -35,7 +35,7 @@
     font-size: 12px;
     font-weight: 700;
     color: #fff;
-    background-color: #1f98f4;
+    background-color: #e65b49;
     box-sizing: border-box;
   }
 }

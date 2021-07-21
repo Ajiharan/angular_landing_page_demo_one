@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit {
   }
 
   showButton() {
-    if (window.innerWidth <= 960) {
+    if (window.innerWidth <= 970) {
       this.isButtonShow = false;
     } else {
       this.isButtonShow = true;
